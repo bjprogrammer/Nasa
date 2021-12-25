@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageUrl"  type="String"/>
+        <variable name="activity" type="com.image.nasa.home.ui.HomeActivity"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/displayImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:src="@drawable/pexels"
+            app:url="@{imageUrl}"
+            app:spinner="@{progressImage}"
+            android:contentDescription="@string/displaying_full_size_image" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/progressImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/AVLoadingIndicatorView.Large"
+            android:visibility="gone"
+            app:indicatorName="BallClipRotatePulseIndicator"
+            app:indicatorColor="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="@{()->activity.closeImageFragment()}"
+            android:layout_marginTop="@dimen/back_btn_marginTop"
+            android:layout_marginStart="@dimen/back_btn_margin"
+            android:background="@drawable/circle"
+            android:padding="@dimen/btn_padding"
+            android:src="@drawable/ic_back"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="empty_view_size">180dp</dimen>
+
+    <dimen name="margin_title">24dp</dimen>
+    <dimen name="back_btn_marginTop">24dp</dimen>
+    <dimen name="back_btn_margin">16dp</dimen>
+    <dimen name="btn_padding">16dp</dimen>
+    <dimen name="btn_size">58dp</dimen>
+
+    <!-- font size -->
+    <dimen name="text_x_large">24sp</dimen>
+    <dimen name="text_normal">14sp</dimen>
+</resources>

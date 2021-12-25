@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/empty_iv"
+        android:layout_width="@dimen/empty_view_size"
+        android:layout_height="@dimen/empty_view_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_empty" />
+
+    <TextView
+        android:id="@+id/empty_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/empty_iv"
+        app:layout_constraintTop_toBottomOf="@id/empty_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="@dimen/btn_padding"
+        android:fontFamily="@font/roboslab_bold_font"
+        android:textSize="@dimen/text_x_large"
+        android:textColor="@color/colorAccent"
+        android:text="@string/nothing_to_show"
+        android:textAlignment="center" />
+</androidx.constraintlayout.widget.ConstraintLayout>
